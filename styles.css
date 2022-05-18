@@ -1,0 +1,158 @@
+/*cria o root com variaveis que serão utilizadas no codigo varias vezes*/
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167bf7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
+}
+
+body {
+    background-color: var(--cor-de-fundo); /*cor de fundo*/
+    color: var(--branco-principal); /*cor da escrita*/
+    font-family: var(--fonte-principal); /* aplica a fonte da internet que buscamos*/
+    font-size: 16px; /*tamanho da fonte*/
+    font-weight: 400; /*"peso" da fonte*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("img/Background.png"); /*imagem de fundo*/
+    background-repeat: no-repeat; /*impede que a imegem se repita*/
+    background-size: contain;
+    align-items: center; /* vai alinhar ao centro da coluna*/
+    text-align: center; /* vai alinhar o texto ao centro*/    
+}
+
+.container { 
+    height: 100vh; /*altura da imagem*/
+    display: grid; /*separa os elementos da tela um do lado do outro ou abaixo do outro, linha e o padrão*/
+    grid-template-columns: 50% 50%; /*agora ocupa o espaço de colunas*/
+}
+
+.container__botao {
+    background-color: var(--botao-azul); /*cor do botao*/
+    border-radius: 5px; /*arredonda a borda do botão*/
+    padding: 1em; /* espaçamento interno do botão*/
+    color: var(--branco-principal); /*cor da escrita no botao*/
+    display: block;/*define display como block para ocupar o espaço inteiro*/
+    text-decoration: none; /*retira o sublinahdo do texto*/
+    margin-bottom: 1em; /*margem do botao*/
+}
+
+.botao__secundario {
+    background-color: transparent; /*fundo do botão transparente*/
+    border: 2px solid var(--branco-principal) /*definições da borda*/
+}
+
+.container__aviso {
+    font-size: 12px; /*tamanho da fonte*/
+    color: var(--cinza-secundario); /*cor da fonte*/
+}
+
+.container__titulo {
+    font-size: 28px; /*tamanho da fonte*/
+    font-weight: 700; /*peso da fonte*/
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /* 1em margem do topo 0 das laterias e 2em margem abaixo*/
+}
+
+.container__caixa {
+    margin: 0 6em; /*margem 0 para esquerda e direita 6em para cima e baixo*/
+}
+
+.secundario__imagem {
+    width: 80%;  /*ajustamos para 80% por receio de abrir muito grande em um celular*/
+}
+
+.secundario {
+    align-items: center; /*alinhar os elementos da grid*/
+    margin: 0 10em; /* margem */
+}
+
+.descricao__titulo {
+    font-weight: 700; /* 700 e o valor da fonte bold que pegamos no site */
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em; /* espacamento entre o titulo e descricao */
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block; /* inline mantem o botao no espaco dele no caso o esquerdo  o block faz a quebra de linha de cima e permitira mudar o tamanho do botao*/
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex; /*Ele transformou essa lista em um flex container. Por padrão esse flex container tem o flex direction que e row(linha),entao fez todos os itens ficarem um do 
+    lado do outro em uma linha*/
+    justify-content: center; /*centralizou todo aquele flex container, todo o display: flex que é todos os itens da lista.*/
+    list-style-type: none; /*tira o estilo da lista, no caso a bolinhas padrao que vem antes do texto*/
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center; /*pega todos os itens inline de dentro do container inteiro. O container nesse caso seria a section dispositivos.
+    Ele vai pegar todos os elementos inline, por exemplo, os textos e vai centralizar eles.*/
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal)
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal)
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul); /* :hover pode ser usado para alterar a cor de um botão quando o usuário passar o cursor sobre ele.*/
+}
+
+.lista__link a:active{
+    color: purple; /* :active pode ser usado para alterar a cor de um botão quando o usuário  o acionar.*/
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito); /*vai mudar a cor do background de fundo quando acionado */
+    color: var(--cor-de-fundo); /*vai mudar a cor da fonte quando acionado*/
+}
